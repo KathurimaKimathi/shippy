@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package consignment;
+
+// Defining our service with the methods we want to expose
+service ShippingService {
+    // Create a consignment service
+   rpc CreateConsignment(Consignment) returns (Response){} 
+   
+   //Get all created consignments
+   rpc GetConsignment(GetRequest) returns (Response){}
+}
+
+message Consignment{
+    string id = 1;
+    string description = 2;
+    int32 weight = 3;
+    repeated Container containers = 4;
+    string vessel_id = 5;
+}
+
+message Container{
+    string id = 1;
+    string customer_id = 2;
+    string origin = 3;
+    string user_id = 4;
+}
+
+//Blank get request
+message GetRequest{}
+
+message Response {
+    bool created = 1;
+    Consignment consignment = 2;
+
+    //Pluralised consignment to our generic response message
+    repeated Consignment consignments = 3;
+}
