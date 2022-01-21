@@ -13,8 +13,7 @@ type handler struct {
 	vesselClient vesselProto.VesselService
 }
 
-// CreateConsignment - we created just one method on our service,
-// which is a create method, which takes a context and a request as an
+// CreateConsignment - takes a context and a request as an
 // argument, these are handled by the gRPC server.
 func (s *handler) CreateConsignment(ctx context.Context, req *pb.Consignment, res *pb.Response) error {
 
@@ -46,7 +45,7 @@ func (s *handler) CreateConsignment(ctx context.Context, req *pb.Consignment, re
 	return nil
 }
 
-// GetConsignments -
+// GetConsignments ...
 func (s *handler) GetConsignment(ctx context.Context, req *pb.GetRequest, res *pb.Response) error {
 	consignments, err := s.repository.GetAll(ctx)
 	if err != nil {
