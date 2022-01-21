@@ -5,8 +5,10 @@ go 1.17
 replace google.golang.org/grpc => google.golang.org/grpc v1.26.0
 
 require (
+	github.com/KathurimaKimathi/shippy/shippy-service-vessel v0.0.0-20220120210328-314dc321e304
 	github.com/golang/protobuf v1.5.2
 	github.com/micro/go-micro/v2 v2.9.1
+	github.com/pkg/errors v0.9.1
 	go.mongodb.org/mongo-driver v1.8.2
 )
 
@@ -44,7 +46,6 @@ require (
 	github.com/nats-io/nuid v1.0.1 // indirect
 	github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
-	github.com/pkg/errors v0.9.1 // indirect
 	github.com/russross/blackfriday/v2 v2.0.1 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect

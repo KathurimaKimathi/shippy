@@ -9,7 +9,9 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-// Create connection client
+// CreateClient pings the connection to check it's correct and that the datastore is available
+// It includes some basic retry logic, i.e by calling itself again if it can't connect.
+// If it exceeds three retries, an exceprion is raised
 func CreateClient(ctx context.Context, uri string, retry int32) (*mongo.Client, error) {
 	conn, err := mongo.Connect(ctx, options.Client().ApplyURI(uri))
 	if err := conn.Ping(ctx, nil); err != nil {
