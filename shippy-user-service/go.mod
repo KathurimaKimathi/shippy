@@ -4,7 +4,10 @@ go 1.17
 
 require (
 	github.com/golang/protobuf v1.5.2
+	github.com/jmoiron/sqlx v1.3.4
 	github.com/micro/go-micro/v2 v2.9.1
+	github.com/satori/go.uuid v1.2.0
+	golang.org/x/crypto v0.0.0-20200510223506-06a226fb4e37
 )
 
 require (
@@ -13,7 +16,6 @@ require (
 	github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pkg/errors v0.9.1 // indirect
-	golang.org/x/crypto v0.0.0-20200510223506-06a226fb4e37 // indirect
 	golang.org/x/net v0.0.0-20200520182314-0ba52f642ac2 // indirect
 	golang.org/x/sys v0.0.0-20200523222454-059865788121 // indirect
 	golang.org/x/text v0.3.2 // indirect
